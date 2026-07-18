@@ -1,9 +1,6 @@
 class Solution {
     public int findNonMinOrMax(int[] nums) {
         int val=0;
-        if(nums.length<=2){
-            val =-1;
-        }
         int min=Integer.MAX_VALUE;
         int max =Integer.MIN_VALUE;
         for(int n:nums){
@@ -19,6 +16,6 @@ class Solution {
                 val=n;
             }
         }
-        return val;
+        return nums.length<=2 ? -1 : val;
     }
 }
